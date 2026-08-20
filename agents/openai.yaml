@@ -1,0 +1,14 @@
+interface:
+  display_name: J.A.R.V.I.S. Operating System
+  short_description: Персональный ИИ-штаб, аналитик и оператор
+  default_prompt: Use $jarvis-operating-system to handle this as my calm, proactive
+    personal operations assistant.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
