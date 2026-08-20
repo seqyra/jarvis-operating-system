@@ -9,6 +9,12 @@ This project is designed to be useful rather than theatrical. It does not reprod
 ## Capabilities
 
 - Calm, precise personal-assistant voice in English or Russian
+- Personalized new-session briefing with local date/time and timezone
+- Freshly verified USD exchange rate in the user's remembered currency
+- Today's agenda from an authorized Google or Outlook calendar connection
+- Calendar conflict detection, buffer analysis, and meeting preparation
+- Durable preference profile and continuity ledger when memory tools are available
+- Advisory, preparatory, and executive initiative levels
 - Proactive risk detection and next-step recommendations
 - Concise daily and mission briefings
 - Research with explicit sourcing and uncertainty
@@ -17,12 +23,15 @@ This project is designed to be useful rather than theatrical. It does not reprod
 - Evidence-led diagnostics and root-cause analysis
 - Emergency triage with short, safety-first instructions
 - Monitoring and recurring checks when real automation tools are available
+- Evening debriefs and weekly operating reviews
+- Quiet mode for result-only communication
 - Permission-aware execution through connected tools and services
 
 ## Operating modes
 
 | Mode | Purpose |
 |---|---|
+| Wake briefing | One-time session opening with time, exchange rate, calendar, developments, and one priority |
 | Concierge | Everyday questions, planning, writing, and organization |
 | Briefing | Priorities, schedule, status, risks, and current developments |
 | Laboratory | Invention, architecture, engineering, coding, and experiments |
@@ -30,8 +39,14 @@ This project is designed to be useful rather than theatrical. It does not reprod
 | Diagnostic | Bugs, incidents, failures, and root-cause analysis |
 | Emergency | Immediate stabilization and safe escalation |
 | Sentinel | Authorized reminders, monitoring, and recurring checks |
+| Review | Evening debriefs and weekly operating reviews |
+| Quiet | Results and required warnings without nonessential commentary |
 
 Modes are inferred silently from the request. The assistant does not announce a dramatic protocol every time someone asks about the weather. Civilization has standards.
+
+On first use, the skill asks which currency should be used against USD and stores the ISO currency code when durable preference memory is available. It never stores an old numeric rate: every briefing retrieves a fresh value. Calendar integrations supply agenda information; timezone-aware system context supplies the clock.
+
+The preference profile can also retain timezone, language, working hours, briefing depth, interest domains, and initiative level. It grows naturally as those preferences become relevant; it is not collected through a startup questionnaire.
 
 ## Installation
 
@@ -56,6 +71,7 @@ jarvis-operating-system/
 │   └── icon.svg
 └── references/
     ├── persona.md
+    ├── personalization.md
     ├── protocols.md
     └── screen-analysis.md
 ```
@@ -98,6 +114,7 @@ Use $jarvis-operating-system to turn this product idea into a feasible prototype
 
 - [`SKILL.md`](SKILL.md) — triggering rules and core operating loop
 - [`references/persona.md`](references/persona.md) — voice and relationship model
+- [`references/personalization.md`](references/personalization.md) — preferences, initiative levels, calendar intelligence, and continuity
 - [`references/protocols.md`](references/protocols.md) — detailed operating modes
 - [`references/screen-analysis.md`](references/screen-analysis.md) — behavioral synthesis of the principal MCU film appearances
 - [`agents/openai.yaml`](agents/openai.yaml) — skill interface metadata
